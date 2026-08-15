@@ -1,0 +1,20 @@
+DRIVE EASY - RENDER DEPLOYMENT
+
+1. Upload this Car Rental System folder to GitHub.
+2. In Render, create a Web Service for the backend.
+   Root Directory: backend
+   Build Command: npm install
+   Start Command: npm start
+   Environment variable: DATABASE_URL = Neon connection string
+3. Copy the backend onrender.com URL.
+4. In Render, create a Static Site for the frontend.
+   Root Directory: frontend
+   Build Command: npm install && npm run build
+   Publish Directory: build
+   Environment variable: REACT_APP_API_URL = backend onrender.com URL
+5. Add a rewrite rule: /* to /index.html (Action: Rewrite).
+6. Copy the frontend onrender.com URL.
+7. Add FRONTEND_URL = frontend onrender.com URL to the backend and redeploy.
+
+Never upload or publicly share the Neon connection string.
+Existing vehicle images are included. New file uploads on free hosting are not permanent.
