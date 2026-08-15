@@ -817,6 +817,7 @@ app.get("/booking/:bookingId", async (req, res) => {
       `
       SELECT
         b.booking_id,
+        b.booking_reference,
         b.customer_id,
         b.car_id,
         b.service_type,
